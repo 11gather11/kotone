@@ -35,6 +35,11 @@ export default defineConfig([
 			...betterTailwindcss.configs['recommended-error'].rules,
 			'better-tailwindcss/enforce-consistent-line-wrapping': ['warn', { printWidth: 120, indent: 'tab' }],
 			'better-tailwindcss/no-unregistered-classes': ['error', { detectComponentClasses: true }]
+		},
+		settings: {
+			'better-tailwindcss': {
+				entryPoint: './src/styles/global.css'
+			}
 		}
 	}
 ])
