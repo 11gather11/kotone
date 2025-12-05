@@ -2,6 +2,7 @@
 import '@/styles/global.css'
 
 import CommonMeta from '@/components/common/CommonMeta.astro'
+import Favicons from '@/components/common/Favicons.astro'
 import { I18N } from '@/config'
 ---
 
@@ -9,6 +10,7 @@ import { I18N } from '@/config'
 <html lang={I18N.lang} dir={I18N.dir}>
 	<head>
 		<CommonMeta />
+		<Favicons />
 	</head>
 	<body>
 		<slot />
