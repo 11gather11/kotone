@@ -7,7 +7,14 @@
 		"dev": "astro dev",
 		"build": "astro check && astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
+		"check:astro": "astro check",
+		"check:eslint": "eslint .",
+		"check:prettier": "prettier --check .",
+		"fix": "npm run fix:eslint && npm run fix:prettier",
+		"fix:eslint": "eslint . --fix",
+		"fix:prettier": "prettier --write .",
+		"knip": "knip"
 	},
 	"dependencies": {
 		"astro": "^5.16.4"
