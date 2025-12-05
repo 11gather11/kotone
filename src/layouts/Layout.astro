@@ -1,0 +1,14 @@
+---
+import { I18N } from '../config'
+import CommonMeta from '@/components/common/CommonMeta.astro'
+---
+
+<!doctype html>
+<html lang={I18N.lang} dir={I18N.dir}>
+	<head>
+		<CommonMeta />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
