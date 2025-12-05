@@ -1,1 +1,19 @@
 @import 'tailwindcss';
+
+:root {
+	--background: oklch(0.9582 0.0152 90.2357);
+	--foreground: oklch(0.376 0.0225 64.3434);
+	--card: oklch(0.9914 0.0098 87.4695);
+	--card-foreground: oklch(0.376 0.0225 64.3434);
+	--primary: oklch(0.7264 0.0581 66.6967);
+	--primary-foreground: oklch(0.2747 0.0139 57.6523);
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+}
