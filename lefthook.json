@@ -1,0 +1,12 @@
+{
+	"$schema": "./node_modules/lefthook/schema.json",
+	"pre-commit": {
+		"parallel": true,
+		"commands": {
+			"prettier": {
+				"run": "bun prettier --write --ignore-unknown {staged_files}",
+				"stage_fixed": true
+			}
+		}
+	}
+}
