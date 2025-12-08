@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
 
+import ThemeToggle from '@/components/widgets/ThemeToggle.astro'
 import { NAVIGATION, SITE } from '@/config'
 ---
 
@@ -28,7 +29,7 @@ import { NAVIGATION, SITE } from '@/config'
 		</nav>
 
 		<div class='flex items-center gap-2'>
-			<slot name='actions' />
+			<ThemeToggle />
 		</div>
 	</div>
 </header>
