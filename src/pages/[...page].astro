@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from 'astro'
+
+import Lorm from '@/components/common/lorm.astro'
+import PostCard from '@/components/widgets/PostCard.astro'
+import MainGridLayout from '@/layouts/MainGridLayout.astro'
+import { getSortedPosts } from '@/utils/content'
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const allPosts = await getSortedPosts()
+	return paginate(allPosts, {
+		pageSize: 5
+	})
+}) satisfies GetStaticPaths
+
+const { page } = Astro.props
+---
+
+<MainGridLayout>
+	<div class='space-y-4'>
+		{page.data.map((entry) => <PostCard entry={entry} />)}
+	</div>
+	<h1>Welcome to Kotone</h1>
+	<p>This is the homepage.</p>
+	<Lorm />
+</MainGridLayout>

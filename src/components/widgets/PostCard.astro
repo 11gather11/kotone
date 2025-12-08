@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+	entry: CollectionEntry<'posts'>
+}
+
+const { entry } = Astro.props
+---
+
+<div class='mx-4 flex h-32 flex-col rounded-lg bg-card p-5'>
+	<a
+		class={`
+			relative flex items-center space-x-1 pl-4 text-3xl font-bold
+			before:absolute before:left-0 before:h-5 before:w-1 before:rounded-md before:bg-primary
+		`}
+		href={`/posts/${entry.slug}`}
+	>
+		<p class='truncate'>{entry.data.title}</p>
+		<Icon name='material-symbols:chevron-right-rounded' size={32} />
+	</a>
+</div>
