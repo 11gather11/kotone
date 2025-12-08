@@ -11,7 +11,7 @@ export const SITE = {
 
 export const NAVIGATION = [
 	{ name: 'Home', href: '/', external: false },
-	{ name: 'archive', href: '/archive', external: false },
+	{ name: 'Archive', href: '/archive', external: false },
 	{ name: 'About', href: '/about', external: false },
 	{ name: 'GitHub', href: 'https://github.com/11gather11', external: true }
 ] as const

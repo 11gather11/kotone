@@ -4,28 +4,31 @@ import { Icon } from 'astro-icon/components'
 import { NAVIGATION, SITE } from '@/config'
 ---
 
-<div class='sticky top-0 z-50 px-4'>
-	<div class='mx-auto max-w-7xl'>
-		<div class='flex h-18 items-center justify-center rounded-b-lg bg-card font-bold text-card-foreground'>
-			<a href='/' class={`flex h-9/12 items-center space-x-2 rounded-lg px-4 text-primary transition-all`}>
-				<Icon name='material-symbols:home-outline-rounded' size={28} />
-				<p>{SITE.title}</p>
-			</a>
-			<div class='flex h-full items-center'>
-				{
-					NAVIGATION.map((item) => (
-						<a
-							aria-label={item.name}
-							href={item.href}
-							target={item.external ? '_blank' : null}
-							class={`flex h-9/12 items-center space-x-2 rounded-lg px-4 transition-all`}
-						>
-							<p>{item.name}</p>
-							{item.external ? <Icon name='material-symbols:display-external-input-rounded' size={16} /> : null}
-						</a>
-					))
-				}
-			</div>
+<header class='sticky top-0 z-50'>
+	<div class='mx-auto flex h-18 max-w-6xl items-center justify-between rounded-b-2xl bg-card px-4 text-card-foreground'>
+		<a href='/' class='flex items-center gap-2 px-4 font-bold text-primary'>
+			<Icon name='material-symbols:home-outline-rounded' size={28} />
+			<span>{SITE.title}</span>
+		</a>
+
+		<nav class='flex items-center'>
+			{
+				NAVIGATION.map((item) => (
+					<a
+						href={item.href}
+						target={item.external ? '_blank' : undefined}
+						rel={item.external ? 'noopener noreferrer' : undefined}
+						class='flex items-center gap-1 px-4 font-bold'
+					>
+						<span>{item.name}</span>
+						{item.external && <Icon name='material-symbols:display-external-input-rounded' size={16} />}
+					</a>
+				))
+			}
+		</nav>
+
+		<div class='flex items-center gap-2'>
+			<slot name='actions' />
 		</div>
 	</div>
-</div>
+</header>
