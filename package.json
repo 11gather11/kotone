@@ -17,7 +17,7 @@
 		"knip": "knip"
 	},
 	"dependencies": {
-		"@iconify-json/line-md": "^1.2.11",
+		"@iconify-json/material-symbols": "^1.2.49",
 		"@tailwindcss/vite": "^4.1.17",
 		"astro": "^5.16.4",
 		"astro-icon": "^1.1.5",
@@ -29,12 +29,12 @@
 		"@eslint/js": "^9.39.1",
 		"eslint": "^9.39.1",
 		"eslint-plugin-astro": "^1.5.0",
-		"eslint-plugin-better-tailwindcss": "^3.7.11",
+		"eslint-plugin-better-tailwindcss": "^3.8.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
 		"eslint-plugin-simple-import-sort": "^12.1.1",
 		"globals": "^16.5.0",
 		"knip": "^5.71.0",
-		"lefthook": "^2.0.7",
+		"lefthook": "^2.0.8",
 		"prettier": "^3.7.4",
 		"prettier-plugin-astro": "^0.14.1",
 		"typescript": "^5.9.3",
